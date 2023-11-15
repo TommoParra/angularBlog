@@ -1,0 +1,8 @@
+.copyright {
+    font-size: .7rem;
+    opacity: .7;
+}
+
+.footer_bar {
+    background-color: var(--primaryColor_light);
+}

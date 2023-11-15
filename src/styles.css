@@ -1,1 +1,55 @@
-/* You can add global styles to this file, and also import other style files */
+/* Root variables */
+:root {
+    --primaryColor: #34ace0;
+    --primaryColor_light: #b2e1f4;
+    --primaryColor_dark: #0d6ea6;
+    --secondaryColor: #ff793f;
+    --secondaryColor_light: #ffaf90;
+    --secondaryColor_dark: #d84e0c;
+
+
+
+}
+
+/* 1400px */
+@media screen and (min-width: 1400px) {
+    :root {}
+}
+
+/* 768px */
+@media screen and (min-width: 768px) {
+    :root {}
+}
+
+/* 512px */
+@media screen and (min-width: 512px) {
+    :root {}
+}
+
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.post_list .post_card:nth-child(1) {
+    grid-column: 1/-1;
+}
+
+.post_list .post_card:nth-child(1) .post_card_content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    max-height: 350px;
+}
+
+.post_list .post_card:nth-child(1) .post_card_content .post_card_image {
+    grid-column: 1;
+    grid-row: 1/-1;
+    width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
