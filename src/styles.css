@@ -1,5 +1,8 @@
 /* Root variables */
 :root {
+
+    --cardBg: #f8fafd;
+    --cardHoverBg: #c2e7ff;
     --primaryColor: #34ace0;
     --primaryColor_light: #b2e1f4;
     --primaryColor_dark: #0d6ea6;
@@ -35,6 +38,8 @@ body {
     font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
+/* Post list layout */
+
 .post_list .post_card:nth-child(1) {
     grid-column: 1/-1;
 }
@@ -52,4 +57,38 @@ body {
     width: 100%;
     max-height: 100%;
     object-fit: cover;
+}
+
+/* header component & its scroll animation */
+.header_component {
+    position: fixed;
+    z-index: 3;
+    top: 30px;
+    left: 10%;
+    width: 80%;
+    max-width: 1400px;
+    background-color: transparent;
+    transition: .5s;
+    margin: auto;
+}
+
+.header_component.scrolled div {
+    width: 100%;
+}
+
+.header_component.scrolled {
+    width: 100%;
+    max-width: 100%;
+    top: 0;
+    left: 0;
+    margin: auto;
+    padding: 0rem 4rem;
+    background-color: var(--primaryColor_light);
+    color: white;
+}
+
+
+.header_component.scrolled .header_bar .main_nav_element span {
+    color: black;
+    font-size: 1rem;
 }

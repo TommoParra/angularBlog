@@ -140,7 +140,7 @@ export class PostsService {
 
     return postsWithFeaturedMoved.map(post => ({
       ...post,
-      text: this.truncateText(post.text, post.featured ? 800 : 300)
+      text: this.truncateText(post.text, post.featured ? 700 : 200)
     }));
   }
 }
