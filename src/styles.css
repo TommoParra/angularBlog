@@ -1,14 +1,22 @@
+/* Google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,300;8..144,400&family=Roboto+Mono&family=Roboto:wght@300;500&display=swap');
+
+@import "node_modules/quill/dist/quill.core.css";
+@import "node_modules/quill/dist/quill.snow.css";
+
+/*
+font-family: 'Roboto', sans-serif; **light 300; medium 500**
+font-family: 'Roboto Flex', sans-serif; **light 300; regular 400**
+font-family: 'Roboto Mono', monospace; **regular 400**
+*/
 /* Root variables */
 :root {
 
-    --cardBg: #f8fafd;
-    --cardHoverBg: #c2e7ff;
-    --primaryColor: #34ace0;
-    --primaryColor_light: #b2e1f4;
-    --primaryColor_dark: #0d6ea6;
-    --secondaryColor: #ff793f;
-    --secondaryColor_light: #ffaf90;
-    --secondaryColor_dark: #d84e0c;
+    --surfaceBg: #f8fafd;
+    --surfaceHoverBg: #c2e7ff;
+    --almostBlack: #060b0b;
+
+
 
 
 
@@ -29,6 +37,18 @@
     :root {}
 }
 
+/* global styles */
+h1,
+h2,
+h3,
+h4,
+h5,
+a,
+p,
+li {
+    color: var(--almostBlack);
+}
+
 body {
     height: 100%;
 }
@@ -38,8 +58,29 @@ body {
     font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
-/* Post list layout */
+/* Titles */
 
+.title {
+    font-weight: 400 !important;
+    font-size: 5.25rem !important;
+    line-height: 5.75rem !important;
+}
+
+.subtitle {
+    font-weight: 300 !important;
+    font-size: 2.5rem !important;
+    line-height: 3.25rem !important;
+}
+
+.title,
+.subtitle {
+    font-family: 'Roboto Flex', sans-serif !important;
+}
+
+/* Global color styles */
+
+
+/* Post list layout */
 .post_list .post_card:nth-child(1) {
     grid-column: 1/-1;
 }
@@ -68,13 +109,17 @@ body {
     width: 80%;
     max-width: 1400px;
     background-color: transparent;
-    transition: .5s;
     margin: auto;
+    border-radius: 24px;
+    transition: .5s;
+
 }
 
-.header_component.scrolled div {
-    width: 100%;
+.header_component::after {
+    content: '';
+    width: 0%;
 }
+
 
 .header_component.scrolled {
     width: 100%;
@@ -83,8 +128,20 @@ body {
     left: 0;
     margin: auto;
     padding: 0rem 4rem;
-    background-color: var(--primaryColor_light);
-    color: white;
+    background-color: white;
+    border-radius: 0;
+}
+
+.header_component.scrolled::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: var(--almostBlack);
+    transition: .5s;
+    transition-delay: .5s;
+
 }
 
 

@@ -1,9 +1,8 @@
-/* Wrapper */
 .post_list {
     max-width: 1400px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 1rem;
+    grid-gap: 3rem;
     padding: 2rem 4rem;
     margin: auto;
 }

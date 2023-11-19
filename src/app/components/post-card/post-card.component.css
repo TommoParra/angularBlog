@@ -9,13 +9,13 @@
 .post_card_content {
     height: 100%;
     border-radius: 20px;
-    background-color: var(--cardBg);
+    background-color: var(--surfaceBg);
     transition: .25s;
     cursor: pointer;
 }
 
 .post_card_content:hover {
-    background-color: var(--cardHoverBg);
+    background-color: var(--surfaceHoverBg);
 }
 
 .post_card_header,

@@ -4,5 +4,6 @@
 }
 
 .footer_bar {
-    background-color: var(--primaryColor_light);
+    background-color: white;
+    border-top: var(--almostBlack) 1px solid;
 }

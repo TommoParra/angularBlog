@@ -1,1 +1,26 @@
-<p>new-post works!</p>
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div>
+        <label for="title">Title</label>
+        <input type="text" name="title" formControlName="title">
+    </div>
+    <div>
+        <label for="excerpt">Excerpt</label>
+        <input type="text" name="excerpt" formControlName="excerpt">
+    </div>
+    <div>
+        <label for="content">Content</label>
+        <p-editor formControlName="content" [style]="{ height: '320px' }"></p-editor>
+    </div>
+    <div>
+        <label for="image">Image URL</label>
+        <input type="text" name="image" formControlName="image_url">
+    </div>
+    <div>
+        <select name="" id="" formControlName="category">
+            <option value="culture_and_color">Culture and Color</option>
+            <option value="color_psychology">Color Psychology</option>
+            <option value="color_symbolism">Color Symbolism</option>
+        </select>
+        <input type="submit" value="Create post">
+    </div>
+</form>

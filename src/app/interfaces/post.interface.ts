@@ -1,9 +1,11 @@
 export interface singlePost {
+    id: number,
     title: string;
+    excerpt: string;
     text: string;
-    author: string;
+    author?: string;
     image: string;
-    date: Date;
+    date?: Date;
     category: string;
     featured?: boolean;
 }
