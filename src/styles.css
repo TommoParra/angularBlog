@@ -34,12 +34,6 @@ font-family: 'Roboto Mono', monospace; **regular 400**
 
 }
 
-/* 420px */
-@media (width > 420px) {
-    :root {}
-}
-
-
 /* 768px */
 @media (width > 768px) {
     :root {
@@ -180,6 +174,15 @@ body {
 }
 
 /* Post List Layout */
+.post_list {
+    max-width: 1400px;
+    display: grid;
+    grid-template-columns: var(--postListGTC);
+    grid-gap: 3rem;
+    padding: 2rem 4rem;
+    margin: auto;
+}
+
 .post_list .post_card:nth-child(1) {
     grid-column: 1/-1;
 }

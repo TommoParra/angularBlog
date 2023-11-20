@@ -28,6 +28,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { NewPostComponent } from './pages/new-post/new-post.component';
+import { CategoryPostsComponent } from './pages/category-posts/category-posts.component';
 
 
 @NgModule({
@@ -40,6 +41,7 @@ import { NewPostComponent } from './pages/new-post/new-post.component';
     HeroComponent,
     SinglePostComponent,
     NewPostComponent,
+    CategoryPostsComponent,
   ],
   imports: [
     BrowserModule,
