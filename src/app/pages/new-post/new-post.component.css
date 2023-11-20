@@ -31,23 +31,7 @@ option {
 }
 
 
-.form_btn {
-    box-sizing: border-box;
-    font-size: 2rem;
-    padding: 10px;
-    width: max-content;
-    margin: auto;
-    background-color: transparent;
-    border: 1px solid transparent;
-    border-bottom: 1px solid var(--almostBlack);
-    outline: none;
-    transition: .25s;
-}
 
-.form_btn:hover {
-    background-color: var(--surfaceHoverBg);
-    border: 1px solid var(--almostBlack);
-}
 
 .form_select {
     height: 3rem;

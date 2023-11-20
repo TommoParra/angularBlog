@@ -7,4 +7,5 @@
     <mat-card-content class="post_card_excerpt">
         <p>{{post.text}}</p>
     </mat-card-content>
+    <a class="btn alt" [routerLink]="['/posts', post.id]">Read more</a>
 </mat-card>
