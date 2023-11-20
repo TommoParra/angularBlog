@@ -1,1 +1,31 @@
-<p>new-post works!</p>
+<app-hero [heroTitle]="'Create a new post'" [heroSubtitle]="'Fill out the form fields and hit create'"></app-hero>
+
+<form class="form" [formGroup]="form" (ngSubmit)="onSubmit()">
+
+    <div class="form_input_container">
+        <label class="form_input_label" for="title">Title</label>
+        <input class="form_input" type="text" name="title">
+    </div>
+    <div class="form_input_container">
+        <label class="form_input_label" for="excerpt">Excerpt</label>
+        <input class="form_input" type="text" name="excerpt" formControlName="excerpt">
+    </div>
+    <div class="form_input_container">
+        <label for="content">Content</label>
+        <p-editor formControlName="content" [style]="{ height: '320px' }"></p-editor>
+    </div>
+    <div class="form_input_container">
+        <label class="form_input_label" for="image">Image URL</label>
+        <input class="form_input" type="text" name="image" formControlName="image_url">
+    </div>
+    <div class="form_input_container">
+        <label class="form_input_label" for="image">Select a category</label>
+        <select class="form_select" formControlName="category">
+            <option class="form_option" value="culture_and_color">Culture and Color</option>
+            <option class="form_option" value="color_psychology">Color Psychology</option>
+            <option class="form_option" value="color_symbolism">Color Symbolism</option>
+        </select>
+    </div>
+    <button class="form_btn" type="submit">Create Post</button>
+
+</form>

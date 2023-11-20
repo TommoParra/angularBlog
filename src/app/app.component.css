@@ -1,0 +1,11 @@
+/* Wrapper */
+.wrapper {
+    padding: 8px 8px 0;
+    display: grid;
+    padding: var(--wrapperPadding);
+}
+
+.wrapper>* {
+    margin: auto;
+    max-width: 1240px;
+}
