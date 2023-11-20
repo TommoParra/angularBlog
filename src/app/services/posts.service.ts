@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { singlePost } from '../interfaces/post.interface';
-import { allPosts } from '../data/allposts/allposts.module';
+import { allPosts } from '../data/allposts.module';
 
 
 @Injectable({
