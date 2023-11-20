@@ -89,6 +89,7 @@ export class PostsService {
         image: "/assets/purple.png",
         date: new Date("2023-12-09"),
         category: "Color Psychology",
+        featured: true,
       },
       {
         id: 7,

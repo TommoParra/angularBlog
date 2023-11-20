@@ -1,6 +1,6 @@
 /* Post header */
-.post_hero {
-    margin: 200px auto 100px;
+.hero {
+    margin: 150px auto 100px;
 }
 
 .post_date {
@@ -12,7 +12,7 @@
 
 .post_subtitle {
     display: grid;
-    grid-template-columns: 3fr 2fr;
+    grid-template-columns: var(--postSubtitleGTC);
     grid-column-gap: 4.5rem;
     grid-row-gap: 2.25rem;
 }
@@ -25,7 +25,7 @@
 }
 
 .post_sm {
-    display: grid;
+    display: var(--postsmDisplay);
     grid-gap: 1rem;
 }
 

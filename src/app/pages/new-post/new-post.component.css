@@ -1,0 +1,55 @@
+label {
+    line-height: 2rem;
+    font-size: 2rem;
+
+    font-family: 'Roboto Mono', monospace;
+}
+
+
+input,
+option {
+    font-family: 'Roboto flex', sans-serif;
+    line-height: 1.5rem;
+    font-size: 1.5rem;
+    padding: 5px;
+}
+
+
+.form {
+    display: grid;
+    grid-gap: 2rem;
+    margin-bottom: 20px;
+}
+
+.form_input_container {
+    display: grid;
+    grid-gap: 1rem;
+}
+
+.form_input_container>* {
+    color: var(--almostBlack);
+}
+
+
+.form_btn {
+    box-sizing: border-box;
+    font-size: 2rem;
+    padding: 10px;
+    width: max-content;
+    margin: auto;
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-bottom: 1px solid var(--almostBlack);
+    outline: none;
+    transition: .25s;
+}
+
+.form_btn:hover {
+    background-color: var(--surfaceHoverBg);
+    border: 1px solid var(--almostBlack);
+}
+
+.form_select {
+    height: 3rem;
+    font-size: 1.5rem;
+}
