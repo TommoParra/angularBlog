@@ -1,4 +1,5 @@
 .header_bar {
+    display: var(--onlyDesktopFlex);
     background-color: transparent;
     padding: 0;
 }

@@ -1,5 +1,6 @@
 <app-hero [heroTitle]="'Welcome to my random blog'"
-    [heroSubtitle]="'Here you will find a bunch of nonsense to suit no one curiosity'"></app-hero>
+    [heroSubtitle]="'Here you will find a bunch of nonsense to suit no one curiosity'">
+</app-hero>
 <section class="post_list">
     <app-post-card class="post_card" *ngFor="let post of postArr" [post]="post"></app-post-card>
 </section>

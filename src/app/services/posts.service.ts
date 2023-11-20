@@ -56,7 +56,7 @@ export class PostsService {
         author: "The Emerald Enclave",
         image: "/assets/green.png",
         date: new Date("2023-12-07"),
-        category: "Color Psychology",
+        category: "color-psychology",
       },
       {
         id: 5,
@@ -88,7 +88,7 @@ export class PostsService {
         author: "The Purple Enigma",
         image: "/assets/purple.png",
         date: new Date("2023-12-09"),
-        category: "Color Psychology",
+        category: "color-psychology",
         featured: true,
       },
       {
@@ -115,7 +115,7 @@ export class PostsService {
         "author": "The Pink Panache",
         "image": "/assets/pink.png",
         "date": new Date("2022-12-09"),
-        "category": "Color Psychology"
+        "category": "color-psychology"
       },
       {
         "id": 9,
