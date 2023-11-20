@@ -24,7 +24,7 @@ export class PostsService {
         author: "The Scarlet Siren",
         image: "/assets/red.png",
         date: new Date("2023-12-06"),
-        category: "Color Symbolism",
+        category: "color-symbolism",
       },
       {
         id: 3,
@@ -40,7 +40,7 @@ export class PostsService {
         author: "The Yellow Sunshine",
         image: "/assets/yellow.png",
         date: new Date("2023-12-07"),
-        category: "Culture and Color",
+        category: "culture-and-color",
       },
       {
         id: 4,
@@ -56,7 +56,7 @@ export class PostsService {
         author: "The Emerald Enclave",
         image: "/assets/green.png",
         date: new Date("2023-12-07"),
-        category: "Color Psychology",
+        category: "color-psychology",
       },
       {
         id: 5,
@@ -72,7 +72,7 @@ export class PostsService {
         author: "The Blue Serenity",
         image: "/assets/blue.png",
         date: new Date("2023-12-08"),
-        category: "Culture and Color",
+        category: "culture-and-color",
       },
       {
         id: 6,
@@ -88,7 +88,7 @@ export class PostsService {
         author: "The Purple Enigma",
         image: "/assets/purple.png",
         date: new Date("2023-12-09"),
-        category: "Color Psychology",
+        category: "color-psychology",
         featured: true,
       },
       {
@@ -105,7 +105,7 @@ export class PostsService {
         author: "The Orange Zest",
         image: "/assets/orange.png",
         date: new Date("2023-12-09"),
-        category: "Color Symbolism",
+        category: "color-symbolism",
       },
       {
         "id": 8,
@@ -115,7 +115,7 @@ export class PostsService {
         "author": "The Pink Panache",
         "image": "/assets/pink.png",
         "date": new Date("2022-12-09"),
-        "category": "Color Psychology"
+        "category": "color-psychology"
       },
       {
         "id": 9,
@@ -125,7 +125,7 @@ export class PostsService {
         "author": "The Black Enigma",
         "image": "/assets/black.png",
         "date": new Date("2023-10-19"),
-        "category": "Color Symbolism"
+        "category": "color-symbolism"
       },
       {
         "id": 10,
@@ -135,7 +135,7 @@ export class PostsService {
         "author": "The White Whisper",
         "image": "/assets/white.png",
         "date": new Date("2023-12-12"),
-        "category": "Culture and Color"
+        "category": "culture-and-color"
       }
     ];
 
@@ -162,7 +162,6 @@ export class PostsService {
   }
 
 
-
   getAll(): singlePost[] {
     const postsWithFeaturedMoved = this.moveFeaturedToFirst([...this.allPosts]);
 
@@ -174,7 +173,14 @@ export class PostsService {
 
   getPostById(postID: number): singlePost | undefined {
     return this.allPosts.find(post => post.id === postID);
+  }
 
+  getPostsByCategory(category: string): singlePost[] {
+    const filterByCat = this.allPosts.filter(post => post.category === category);
+    return filterByCat.map(post => ({
+      ...post,
+      text: this.truncateText(post.text, post.featured ? 700 : 200)
+    }));
   }
 
 }

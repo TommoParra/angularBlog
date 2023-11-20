@@ -16,6 +16,9 @@ font-family: 'Roboto Mono', monospace; **regular 400**
     --surfaceHoverBg: #c2e7ff;
     --almostBlack: #060b0b;
 
+    /* structurte variables */
+    --onlyDesktopFlex: none;
+
     /* hero */
     --heroMargin: 150px auto 50px;
 
@@ -34,17 +37,11 @@ font-family: 'Roboto Mono', monospace; **regular 400**
 
 }
 
-/* 420px */
-@media (width > 420px) {
-    :root {}
-}
-
-
 /* 768px */
 @media (width > 768px) {
     :root {
         /* hero */
-        --heroMargin: 150px auto 100px;
+        --heroMargin: 150px auto 50px;
 
         /* wrapper */
         --wrapperPadding: 0 2rem;
@@ -63,6 +60,10 @@ font-family: 'Roboto Mono', monospace; **regular 400**
 /* 912px */
 @media (width > 912px) {
     :root {
+
+        /* structurte variables */
+        --onlyDesktopFlex: flex;
+
         /* wrapper */
         --wrapperPadding: 0 2rem;
 
@@ -122,6 +123,37 @@ body {
     font-family: 'Roboto Flex', sans-serif !important;
 }
 
+/* buttons */
+.btn {
+    box-sizing: border-box;
+    font-size: 2rem;
+    padding: 10px;
+    width: max-content;
+    margin: auto;
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-bottom: 1px solid var(--almostBlack);
+    outline: none;
+    transition: .25s;
+}
+
+.btn.alt {
+    border: none;
+    border-radius: 0;
+}
+
+
+.btn:hover {
+    background-color: var(--surfaceHoverBg);
+    border: 1px solid var(--almostBlack);
+}
+
+.btn.alt:hover {
+    border: transparent;
+    border-left: 1px solid var(--almostBlack);
+}
+
+
 /* hero */
 .hero {
     margin: var(--heroMargin);
@@ -180,6 +212,15 @@ body {
 }
 
 /* Post List Layout */
+.post_list {
+    max-width: 1400px;
+    display: grid;
+    grid-template-columns: var(--postListGTC);
+    grid-gap: 3rem;
+    padding-bottom: 2rem;
+    margin: auto;
+}
+
 .post_list .post_card:nth-child(1) {
     grid-column: 1/-1;
 }

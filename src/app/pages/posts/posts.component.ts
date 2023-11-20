@@ -19,7 +19,6 @@ export class PostsComponent {
 
   ngOnInit() {
     this.postArr = this.postService.getAll();
-    console.log(this.postArr)
   }
 
 }
