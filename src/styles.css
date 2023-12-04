@@ -23,7 +23,7 @@ font-family: 'Roboto Mono', monospace; **regular 400**
     --heroMargin: 150px auto 50px;
 
     /* wrapper */
-    --wrapperPadding: 0 1rem;
+    --wrapperPadding: 1rem;
 
     /* single Post */
     --postSubtitleGTC: 1fr;
@@ -44,7 +44,7 @@ font-family: 'Roboto Mono', monospace; **regular 400**
         --heroMargin: 150px auto 50px;
 
         /* wrapper */
-        --wrapperPadding: 0 2rem;
+        --wrapperPadding: 2rem;
 
         /* single post */
         --postSubtitleGTC: 3fr 2fr;
@@ -64,8 +64,6 @@ font-family: 'Roboto Mono', monospace; **regular 400**
         /* structurte variables */
         --onlyDesktopFlex: flex;
 
-        /* wrapper */
-        --wrapperPadding: 0 2rem;
 
         /* post list */
         --postListGTC: 1fr 1fr;
@@ -166,9 +164,10 @@ body {
     position: fixed;
     z-index: 3;
     top: 30px;
-    left: 10%;
-    width: 80%;
-    max-width: 1400px;
+    left: var(--wrapperPadding);
+
+    width: 100%;
+    max-width: 1240px;
     background-color: transparent;
     margin: auto;
     border-radius: 24px;
@@ -185,10 +184,8 @@ body {
 .header_component.scrolled {
     width: 100%;
     max-width: 100%;
+    transform: translateX(-2rem);
     top: 0;
-    left: 0;
-    margin: auto;
-    padding: 0rem 4rem;
     background-color: white;
     border-radius: 0;
 }

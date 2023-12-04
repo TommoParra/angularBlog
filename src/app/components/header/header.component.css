@@ -1,7 +1,7 @@
 .header_bar {
     display: var(--onlyDesktopFlex);
     background-color: transparent;
-    padding: 0;
+    padding: var(--wrapperPaddingalmostBlack);
 }
 
 .main_nav_element:first-child {

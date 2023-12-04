@@ -1,8 +1,8 @@
 /* Wrapper */
 .wrapper {
-    padding: 8px 8px 0;
     display: grid;
-    padding: var(--wrapperPadding);
+    padding-right: var(--wrapperPadding);
+    padding-left: var(--wrapperPadding);
 }
 
 .wrapper>* {
